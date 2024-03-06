@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: Roboto-regular;
+  src: url("assets/fonts/Roboto-Regular.ttf")
+}
+@font-face {
+  font-family: Roboto-bold;
+  src: url("assets/fonts/Roboto-Bold.ttf");
+}
+body{
+  background: hsl(235, 18%, 26%);
+}
+
+p {
+  font-family: Roboto-regular;
+  font-size: 16px;
+}
+h1{
+  font-family: Roboto-bold;
+  font-size: 48px;
+  color: hsl(234, 29%, 20%)
+
+}
+h2{
+  font-family: Roboto-regular;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.column {
+  flex: 50%;
+}
+.row{
+  display: flex;
+}
+

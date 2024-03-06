@@ -1,0 +1,39 @@
+<div *ngIf="!success" class="row component">
+  <div class="column text-side">
+    <h1>Stay updated!</h1>
+    <p> Join 60,000+ product managers receiving monthly updates on:</p>
+    <div class="list">
+      <p><i class="icon list"></i>Product discovery and building what matters</p>
+      <p><i class="icon list"></i>Measuring to ensure updates are a success</p>
+      <p><i class="icon list"></i>And much more!</p>
+    </div>
+    <div>
+      <div class="email-side">
+        <div class="row-email">
+        <h2>Email address</h2>
+        <h2 class="error-msg" *ngIf="errorMessage!=''">
+          {{ errorMessage }}
+        </h2>
+        </div>
+        <form (ngSubmit)="onSubmit()">
+          <input [ngClass]="errorMessage!=='' ? 'error-input' : ''" (keyup)="onKey($event)" class="email-input" type="email" placeholder="email@company.com">
+          <button (window:keypress.enter)="onSubmit()" (click)="onSubmit()">Subscribe to monthly newsletter</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="column image">
+    <img id="desktopimg" ngSrc="../assets/images/illustration-sign-up-desktop.svg" alt="illustration signup"
+         height="593" width="400">
+    <img id="mobileimg" ngSrc="../assets/images/illustration-sign-up-mobile.svg" alt="illustration signup" height="284"
+         width="375">
+  </div>
+</div>
+<div *ngIf="success" class="component success-comp">
+  <i class="icon success"></i>
+  <h1>Thanks for subscribing!</h1>
+  <p>A confirmation email has been sent to <b>{{emailInput}}</b> Please open it and click the button inside to confirm your subscription.</p>
+  <button (click)="onDismiss()">Dismiss Message</button>
+</div>
+
