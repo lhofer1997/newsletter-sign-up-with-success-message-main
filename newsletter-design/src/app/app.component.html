@@ -18,7 +18,6 @@
         <form (ngSubmit)="onSubmit()">
           <input [ngClass]="errorMessage!=='' ? 'error-input' : ''" (keyup)="onKey($event)" class="email-input" type="email" placeholder="email@company.com">
           <button (window:keypress.enter)="onSubmit()" (click)="onSubmit()">Subscribe to monthly newsletter</button>
-
         </form>
       </div>
     </div>
@@ -31,9 +30,11 @@
   </div>
 </div>
 <div *ngIf="success" class="component success-comp">
+  <div class="success-text">
   <i class="icon success"></i>
   <h1>Thanks for subscribing!</h1>
   <p>A confirmation email has been sent to <b>{{emailInput}}</b> Please open it and click the button inside to confirm your subscription.</p>
-  <button (click)="onDismiss()">Dismiss Message</button>
+  <button class="button-success" (click)="onDismiss()">Dismiss Message</button>
+  </div>
 </div>
 

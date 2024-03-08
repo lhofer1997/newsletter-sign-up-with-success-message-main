@@ -1,8 +1,4 @@
 
-.list {
-  vertical-align: middle;
-  margin-right: 15px;
-}
 
 #desktopimg{display: block}
 #mobileimg{display: none}
@@ -17,10 +13,15 @@
   border-radius: 20px;
   width: 60%
 }
-
 .text-side {
   padding: 3em;
 }
+
+.list {
+  vertical-align: middle;
+  margin-right: 15px;
+}
+
 .row-email {
   display: flex;
 }
@@ -105,7 +106,6 @@ button:hover{
     height: 100%;
     padding: 0;
     border-radius: 0;
-
   }
   .image{
     width: 100%;
@@ -118,8 +118,28 @@ button:hover{
     display: block;
   }
   .text-side{
-    padding:0;
+    padding:50px;
     position:absolute;
     bottom: 50px;
+  }
+
+  .success-comp{
+    position: fixed;
+  }
+
+  .success-text{
+    padding: 2em;
+    top:100px;
+    position: relative;
+    height: 100%;
+
+  }
+  .button-success {
+    position: relative;
+    bottom: -40%;
+  }
+  .success{
+    scale:3;
+    display:block;
   }
 }
